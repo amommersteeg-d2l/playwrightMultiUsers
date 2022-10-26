@@ -1,0 +1,21 @@
+{
+  "name": "playwrightmultiusers",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amommersteeg-d2l/playwrightMultiUsers.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amommersteeg-d2l/playwrightMultiUsers/issues"
+  },
+  "homepage": "https://github.com/amommersteeg-d2l/playwrightMultiUsers#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.27.1"
+  }
+}
