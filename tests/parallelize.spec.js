@@ -22,7 +22,6 @@ for (let i=0; i<numUsers; i++){
         for(let j=0; j<numIteration; j++){
             await test.step(`Iteration ${j}`, async () => {
                 const context = await browser.newContext();
-                // Create a new page inside context.
                 const page = await context.newPage();
 
                 await test.step("loading", async() => {
@@ -42,37 +41,5 @@ for (let i=0; i<numUsers; i++){
         
     });
 }
-
-
-
-// Example using time
-// const lengthMin = 1;
-
-// for (let i=0; i<numUsers; i++){
-//     test(`User ${i}`, async ({ browser }) => {
-//         let j=0;
-//         const startTime = Date.now()
-//         while((Date.now() - startTime) <= (lengthMin * 60000) ){
-//             j++
-//             await test.step(`Iteration ${j}`, async () => {
-//                 const context = await browser.newContext();
-//                 // Create a new page inside context.
-//                 const page = await context.newPage();
-
-//                 await page.goto('https://google.ca/', { waitUntil: 'networkidle' })
-//                 await page.getByRole('combobox', { name: 'Search' }).fill('hockey');
-//                 await page.getByRole('button', { name: 'Google Search' }).first().click();
-//                 await page.waitForNavigation();
-//                 await page.waitForLoadState('networkidle');
-    
-//                 console.log(`User ${i} Loop ${j} - ${process.env.TEST_WORKER_INDEX}`);
-//                 console.log(`User ${i} Loop ${j} - ${process.env.TEST_PARALLEL_INDEX}`);
-
-//                 await context.close();  /// need to clear cache and storage between iterations
-//             })
-//         }
-        
-//     });
-// }
 
 
